@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu cartão</title>
+<style>
+  .card-carlbank{
+    width:320px;
+    height:190px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    color:white;
+
+    background: linear-gradient(
+        135deg,
+        gold,
+        black,
+        gold
+    );
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.det {
+  font-family:'Segoe UI',sans-serif;
+}
+
+/* brilho estilo Nubank */
+.card-carlbank::before{
+    content:"";
+    position:absolute;
+
+    width:200px;
+    height:200px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:50%;
+
+    top:-60px;
+    right:-60px;
+
+    filter:blur(2px);
+}
+
+form{
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+/* chip do cartão */
+.chip{
+    width:45px;
+    height:30px;
+
+    background:gold;
+
+    border-radius:6px;
+
+    margin:15px 0;
+}
+
+/* número do cartão */
+.numero{
+    letter-spacing:3px;
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* nome e validade */
+.info{
+    display:flex;
+    justify-content:space-between;
+
+    margin-top:20px;
+
+    font-size:14px;
+    opacity:.9;
+}
+</style>
+</head>
+<body>
+    
+    <div class="card-carlbank">
+
+    <h3>CarlBank Platinum</h3>
+
+    <div class="chip"></div>
+
+    <p class="numero">
+        **** **** **** 4587
+    </p>
+   
+    <div class="info">
+        <span>Usuario</span>
+        <span>12/29</span>
+    </div>
+</div>
+<br>
+<div class="det">
+    <form>
+
+        
+        <h3>Detalhes do Cartão</h3>
+
+        <p>Limite Total: R$ 8.000,00</p>
+        <p>Disponível: R$ 4.659,50</p
+        <p>Fatura Atual: R$ 3.340,50</p>
+        <p>Melhor Dia de Compra: 25</p>
+        <p>Vencimento: 05</p>
+
+    </form>
+    </div>
+</div>
+    
+</body>
+</html>
