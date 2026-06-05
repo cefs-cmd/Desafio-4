@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu cartão</title>
 <style>
-  .card-carlbank{
+body  {
+    background-color: rgb(112, 97, 8);
+    }
+  .card-carlbank{   /* estilazação do cartão*/
     width:320px;
     height:190px;
 
@@ -31,43 +34,31 @@
 }
 
 .det {
-  font-family:'Segoe UI',sans-serif;
+  font-family:'Segoe UI',sans-serif;  /*estilazação das letras*/
 }
 
 /* brilho estilo Nubank */
-.card-carlbank::before{
-    content:"";
-    position:absolute;
+.card-carlbank::before {
+    content: "";               /*tamanho e posição do cartão */
+    position: fixed;
 
-    width:200px;
-    height:200px;
+    width: 200px;
+    height: 200px;
 
-    background:rgba(255,255,255,.15);
+    background: rgba(255,255,255,.15);
+    border-radius: 50%;
 
-    border-radius:50%;
-
-    top:-60px;
-    right:-60px;
-
-    filter:blur(2px);
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
 }
 
 form{
-    background: white;
+    background: white;      /*cor do form */
     border-radius: 15px;
+    border-radius: 4px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
-}
-/* chip do cartão */
-.chip{
-    width:45px;
-    height:30px;
-
-    background:gold;
-
-    border-radius:6px;
-
-    margin:15px 0;
 }
 
 /* número do cartão */
@@ -87,9 +78,18 @@ form{
     font-size:14px;
     opacity:.9;
 }
+
+form {
+    font-family: 'Segoe UI', sans-serif;
+}
+p, form,{
+ font-family: 'Segoe UI', sans-serif;
+
+}
 </style>
 </head>
 <body>
+    <center>
     
     <div class="card-carlbank">
 
@@ -106,19 +106,30 @@ form{
         <span>12/29</span>
     </div>
 </div>
+</center>
 <br>
 <div class="det">
     <form>
 
-        
         <h3>Detalhes do Cartão</h3>
-
-        <p>Limite Total: R$ 8.000,00</p>
-        <p>Disponível: R$ 4.659,50</p
-        <p>Fatura Atual: R$ 3.340,50</p>
-        <p>Melhor Dia de Compra: 25</p>
-        <p>Vencimento: 05</p>
-
+        
+       <form>
+        <p style="color: green;"> Total: R$ 8.000,00</p>
+       </form>
+    <br>
+        <form>
+        <p style="color: green;"> Disponível: R$ 4.659,50</p>
+        </form>
+    <br>
+       <form>
+        <p style="color: rgb(190, 190, 18);"> Fatura Atual: R$ 3.340,50</p>
+       </form>
+     <br>
+       <form>
+        <p style="color: green"> Melhor dia de Compra: 25</p>
+        <p style="color:red;"> Vencimento: 05</p>
+        </form>
+     <br>
     </form>
     </div>
 </div>
