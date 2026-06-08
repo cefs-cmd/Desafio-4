@@ -1,138 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu cartão</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarlBank Platinum</title>
+
 <style>
-body  {
-    background-color: rgb(19, 17, 10);
-    }
-  .card-carlbank{   /* estilazação do cartão*/
-    width:320px;
-    height:190px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-    padding:20px;
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f0f0f,#1a1a1a,#000);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px 15px;
+}
 
-    border-radius:20px;
+/* CARTÃO */
 
+.card-carlbank{
+    width:350px;
+    height:210px;
+    padding:25px;
+    border-radius:25px;
     color:white;
 
-    background: linear-gradient(
+    background:linear-gradient(
         135deg,
-        gold,
-        black,
-        gold
+        #ffd700,
+        #111,
+        #caa300
     );
 
-    box-shadow:
-        0 20px 40px rgba(5, 1, 1, 0.25);
-
     position:relative;
-
     overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.5);
 }
 
-.det {
-  font-family:'Segoe UI',sans-serif;  /*estilazação das letras*/
+.card-carlbank::before{
+    content:"";
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-80px;
 }
 
-/* brilho estilo Nubank */
-.card-carlbank::before {
-    content: "";               /*tamanho e posição do cartão */
-    position: fixed;
-
-    width: 200px;
-    height: 200px;
-
-
-    border-radius: 50%;
-
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+.bank{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-form{
-    background: white;      /*cor do form */
-    border-radius: 15px;
-    border-radius: 4px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+.bank h3{
+    font-size:22px;
 }
 
-/* número do cartão */
+.platinum{
+    font-size:12px;
+    opacity:.8;
+}
+
+.chip{
+    width:55px;
+    height:35px;
+
+    margin-top:25px;
+
+    border-radius:8px;
+
+    background:linear-gradient(
+        135deg,
+        #ffe082,
+        #d4af37
+    );
+}
+
 .numero{
-    letter-spacing:3px;
-    font-size:18px;
-    margin-top:10px;
+    margin-top:25px;
+    font-size:22px;
+    letter-spacing:4px;
 }
 
-/* nome e validade */
 .info{
     display:flex;
     justify-content:space-between;
-
-    margin-top:20px;
-
+    margin-top:10px;
     font-size:14px;
-    opacity:.9;
 }
 
-form {
-    font-family: 'Segoe UI', sans-serif;
-}
-p, form,{
- font-family: 'Segoe UI', sans-serif;
+/* DETALHES */
 
+.details{
+    width:350px;
+    margin-top:25px;
+}
+
+.details h2{
+    color:white;
+    margin-bottom:15px;
+}
+
+.item{
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    margin-bottom:12px;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.15);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.label{
+    color:#555;
+    font-weight:600;
+}
+
+.value{
+    font-weight:bold;
+}
+
+.green{
+    color:#16a34a;
+}
+
+.yellow{
+    color:#ca8a04;
+}
+
+.red{
+    color:#dc2626;
 }
 </style>
 </head>
 <body>
-    <center>
-    
-    <div class="card-carlbank">
 
-    <h3>CarlBank Platinum</h3>
+<div class="card-carlbank">
+
+    <div class="bank">
+        <h3>CarlBank</h3>
+        <span class="platinum">PLATINUM</span>
+    </div>
 
     <div class="chip"></div>
 
-    <p class="numero">
+    <div class="numero">
         **** **** **** 4587
-    </p>
-   
+    </div>
+
     <div class="info">
-        <span>Usuario</span>
+        <span>USUÁRIO</span>
         <span>12/29</span>
     </div>
-</div>
-</center>
-<br>
-<div class="det">
-    <form>
 
-        <h3>Detalhes do Cartão</h3>
-        
-       <form>
-        <p style="color: green;"> Total: R$ 8.000,00</p>
-       </form>
-    <br>
-        <form>
-        <p style="color: green;"> Disponível: R$ 4.659,50</p>
-        </form>
-    <br>
-       <form>
-        <p style="color: rgb(190, 190, 18);"> Fatura Atual: R$ 3.340,50</p>
-       </form>
-     <br>
-       <form>
-        <p style="color: green"> Melhor dia de Compra: 25</p>
-        <p style="color:red;"> Vencimento: 05</p>
-        </form>
-     <br>
-    </form>
-    </div>
 </div>
-    
+
+<div class="details">
+
+    <h2>Detalhes do Cartão</h2>
+
+    <div class="item">
+        <span class="label">Limite Total</span>
+        <span class="value green">R$ 8.000,00</span>
+    </div>
+
+    <div class="item">
+        <span class="label">Disponível</span>
+        <span class="value green">R$ 4.659,50</span>
+    </div>
+
+    <div class="item">
+        <span class="label">Fatura Atual</span>
+        <span class="value yellow">R$ 3.340,50</span>
+    </div>
+
+    <div class="item">
+        <span class="label">Melhor dia de compra</span>
+        <span class="value green">25</span>
+    </div>
+
+    <div class="item">
+        <span class="label">Vencimento</span>
+        <span class="value red">05</span>
+    </div>
+
+</div>
+
 </body>
 </html>
